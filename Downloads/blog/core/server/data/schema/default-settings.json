@@ -1,0 +1,245 @@
+{
+    "core": {
+        "db_hash": {
+            "defaultValue": null
+        },
+        "next_update_check": {
+            "defaultValue": null
+        },
+        "notifications": {
+            "defaultValue": "[]"
+        },
+        "session_secret": {
+            "defaultValue": null
+        },
+        "theme_session_secret": {
+            "defaultValue": null
+        },
+        "ghost_public_key": {
+            "defaultValue": null
+        },
+        "ghost_private_key": {
+            "defaultValue": null
+        },
+        "members_public_key": {
+            "defaultValue": null
+        },
+        "members_private_key": {
+            "defaultValue": null
+        },
+        "members_email_auth_secret": {
+            "defaultValue": null
+        }
+    },
+    "site": {
+        "title": {
+            "defaultValue": "Ghost",
+            "validations": {
+                "isLength": {
+                    "max": 150
+                }
+            },
+            "flags": "PUBLIC"
+        },
+        "description": {
+            "defaultValue": "The professional publishing platform",
+            "validations": {
+                "isLength": {
+                    "max": 200
+                }
+            },
+            "flags": "PUBLIC"
+        },
+        "logo": {
+            "defaultValue": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        },
+        "cover_image": {
+            "defaultValue": "https://static.ghost.org/v3.0.0/images/publication-cover.png"
+        },
+        "icon": {
+            "defaultValue": ""
+        },
+        "accent_color": {
+            "defaultValue": "",
+            "flags": "PUBLIC"
+        },
+        "lang": {
+            "defaultValue": "en",
+            "validations": {
+                "isEmpty": false
+            }
+        },
+        "timezone": {
+            "defaultValue": "Etc/UTC",
+            "validations": {
+                "isTimezone": true,
+                "isEmpty": false
+            }
+        },
+        "codeinjection_head": {
+            "defaultValue" : ""
+        },
+        "codeinjection_foot": {
+            "defaultValue" : ""
+        },
+        "facebook": {
+            "defaultValue" : "ghost"
+        },
+        "twitter": {
+            "defaultValue" : "tryghost"
+        },
+        "navigation": {
+            "defaultValue": "[{\"label\":\"Home\", \"url\":\"/\"},{\"label\":\"Tag\", \"url\":\"/tag/getting-started/\"}, {\"label\":\"Author\", \"url\":\"/author/ghost/\"},{\"label\":\"Help\", \"url\":\"https://ghost.org/docs/\"}]"
+        },
+        "secondary_navigation": {
+            "defaultValue": "[]"
+        },
+        "meta_title": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 300
+                }
+            }
+        },
+        "meta_description": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 500
+                }
+            }
+        },
+        "og_image": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 2000
+                }
+            }
+        },
+        "og_title": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 300
+                }
+            }
+        },
+        "og_description": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 300
+                }
+            }
+        },
+        "twitter_image": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 2000
+                }
+            }
+        },
+        "twitter_title": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 300
+                }
+            }
+        },
+        "twitter_description": {
+            "defaultValue": null,
+            "validations": {
+                "isLength": {
+                    "max": 300
+                }
+            }
+        }
+    },
+    "theme": {
+        "active_theme": {
+            "defaultValue": "casper",
+            "flags": "RO"
+        }
+    },
+    "private": {
+        "is_private": {
+            "defaultValue": "false",
+            "validations": {
+                "isIn": [["true", "false"]]
+            }
+        },
+        "password": {
+            "defaultValue": ""
+        },
+        "public_hash": {
+            "defaultValue": null
+        }
+    },
+    "members": {
+        "default_content_visibility": {
+            "defaultValue": "public"
+        },
+        "members_subscription_settings": {
+            "defaultValue": "{\"fromAddress\":\"noreply\",\"allowSelfSignup\":true,\"paymentProcessors\":[{\"adapter\":\"stripe\",\"config\":{\"secret_token\":\"\",\"public_token\":\"\",\"product\":{\"name\":\"Ghost Subscription\"},\"plans\":[{\"name\":\"Monthly\",\"currency\":\"usd\",\"interval\":\"month\",\"amount\":\"\"},{\"name\":\"Yearly\",\"currency\":\"usd\",\"interval\":\"year\",\"amount\":\"\"}]}}]}"
+        },
+        "stripe_connect_integration": {
+            "defaultValue": "{}"
+        }
+    },
+    "portal" : {
+        "portal_name": {
+            "defaultValue": "true",
+            "validations": {
+                "isEmpty": false,
+                "isIn": [["true", "false"]]
+            }
+        },
+        "portal_button": {
+            "defaultValue": "true",
+            "validations": {
+                "isEmpty": false,
+                "isIn": [["true", "false"]]
+            }
+        },
+        "portal_plans": {
+            "defaultValue": "[\"free\", \"monthly\", \"yearly\"]"
+        }
+    },
+    "email": {
+        "bulk_email_settings": {
+            "defaultValue": "{\"provider\":\"mailgun\", \"apiKey\": \"\", \"domain\": \"\", \"baseUrl\": \"\"}"
+        }
+    },
+    "amp": {
+        "amp": {
+            "defaultValue" : "true",
+            "validations": {
+                "isIn": [["true", "false"]]
+            }
+        }
+    },
+    "labs": {
+        "labs": {
+            "defaultValue": "{}"
+        }
+    },
+    "slack": {
+        "slack": {
+            "defaultValue": "[{\"url\":\"\", \"username\":\"Ghost\"}]"
+        }
+    },
+    "unsplash": {
+        "unsplash": {
+            "defaultValue": "{\"isActive\": true}"
+        }
+    },
+    "views": {
+        "shared_views": {
+            "defaultValue": "[]"
+        }
+    }
+}
